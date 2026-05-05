@@ -79,7 +79,7 @@
 |----|--------------|
 | PRE-02 | user is logged in & on learning page. |
 | PRE-03 | user has already watched IVy video and is on IVy video page. | 
-
+| PRE-04 | video already exists. | 
 
 ### Test Case
 | Test ID | Description/Scenario | Precondition | Test Step | Expected Result | Actual Result | Status |
@@ -96,4 +96,11 @@
 | LEARN-09 | View report | PRE-02 | - Click on a Subject<Br>- Click on report | It should display the detailed report of selected subject IVy. | It displayed the detailed report of selected subject IVy. | PASS |
 | LEARN-10 | Add to plan book | PRE-03 | - Click Add to planbook<br>- Enter title<br>- Select start date and end time<br>- Add description<br>- Select does not repeat<br>- Select end date<br>- Select notification time<br>- Click Save | User should be navigated to planbook page & Plan should be set & success message should be displayed. | User is navigated to planbook page & Plan is set & success message is displayed. | PASS |
 | LEARN-11 | Revision page | PRE-03 | - Click on Revision notes | User should be redirected to the revision page. | User is redirected to the revision page. | PASS |
-| LEARN-12 | Learning Guide | PRE-02 | - Click on selected subject<br>- 
+| LEARN-12 | Learning Guide | PRE-02 | - Click on selected subject<br>- Click on learning guide button<br>- Click on subject guide. | A Modal box should be prompted & study guide should open. | A Modal box is prompted & study guide is opened. | PASS | 
+| LEARN-13 | Premium interactive video | PRE-02 | - Click on subject of choice<br>- Click on Premium Video | User should be redirected to video page and video shall not be available for freemium user and must show proper message to upgrade to premium to access the video. | User is redirected to video page and video is not available for freemium user and proper message to upgrade to premium to access the video is displayed. | PASS | 
+| LEARN-14 | Filtering Videos using dropdown | PRE-02 | - Click on subject of choice<br>- Click on Dropdown menu<br>- Click on random subject | Interactive videos based on selected filter from the dropdown should be displayed. | Interactive videos based on selected filter from the dropdown is displayed. | PASS |
+| LEARN-15 | Search Video using search bar | PRE-02 | - Click on subject of choice<br>- Click on search bar<br>- Enter a video name or just a single character related to video. | Video should be displayed based on searched name. | Video is displayed based on searched name. | PASS | 
+| LEARN-16 | Important video filtering | PRE-02 | - Click on subject of choice<br>- Click on star icon | Important videos should be displayed. | Important videos is displayed. | PASS |
+| LEARN-17 | Verify Video Control | PRE-02 | - Click on subject of choice<br>- Click on video<br>- Click play<br>- Interact with forward control<br>- Interact with backward control<br>- Click on pause<br>- Drag the playhead. | The should function as per the use of video control. | The video is functioned as per the use of video control. | PASS |
+| LEARN-18 | Verify Ebook | PRE-02 | - Click on Ebook<br>- Select subject<br>- Select an ebook<br>- Click on read Book | A new tab should open along with selected ebook. | A new tab is opened along with selected ebook. | PASS |
+| LEARN-19 | 
