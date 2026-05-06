@@ -80,6 +80,10 @@
 | PRE-02 | user is logged in & on learning page. |
 | PRE-03 | user has already watched IVy video and is on IVy video page. | 
 | PRE-04 | video already exists. | 
+| PRE-05 | user is on ebook page. |
+| PRE-06 | User has already opened an ebook. |
+
+
 
 ### Test Case
 | Test ID | Description/Scenario | Precondition | Test Step | Expected Result | Actual Result | Status |
@@ -103,4 +107,13 @@
 | LEARN-16 | Important video filtering | PRE-02 | - Click on subject of choice<br>- Click on star icon | Important videos should be displayed. | Important videos is displayed. | PASS |
 | LEARN-17 | Verify Video Control | PRE-02 | - Click on subject of choice<br>- Click on video<br>- Click play<br>- Interact with forward control<br>- Interact with backward control<br>- Click on pause<br>- Drag the playhead. | The should function as per the use of video control. | The video is functioned as per the use of video control. | PASS |
 | LEARN-18 | Verify Ebook | PRE-02 | - Click on Ebook<br>- Select subject<br>- Select an ebook<br>- Click on read Book | A new tab should open along with selected ebook. | A new tab is opened along with selected ebook. | PASS |
-| LEARN-19 | 
+| LEARN-19 | Ebook Report | PRE-05 | - Click on subject<br>- Click on Report menu | Report page should open that displays the detailed report of the select ebook. | Report page opened that displayed the detailed report of the selected ebook. | PASS |
+| LEARN-20 | Verify EBook Progress | PRE-05 | - Click on subject<br>- Click on available Book<br>- Click on Check Progress option. | It should redirect user to report page and display the detailed progress report based on page accessed. | It redirected user to report page and displayed the detailed progress report based on page accessed. | PASS |
+| LEARN-21 | Verify ebook mark as important | PRE-05 | - Click on subject<br>- Click on available Book<br>- Click on mark as important | Success message "Marked as important" should display. | Success message "Marked as important" is displayed | PASS | 
+| LEARN-22 | Verify ebook add bookmark | PRE-06 | - Click on add bookmark<br>- Enter description<br>- Click Save | "Bookmark updated successfully" Message should display | "Bookmark updated successfully" message displayed. | PASS |
+| LEARN-23 | Verify Delete bookmark | PRE-06 | - Click on Delete Bookmark<br>- Click Delete on confirmation modal | "Bookmark deleted successfully" message should display. | "Bookmark deleted successfully" message displayed | PASS |
+| LEARN-24 | Verify ebook additional page | PRE-06 | - Click on additional resource button just above the ebook. | additional resource modal should open | Additional resource modal is opened. | PASS |
+| LEARN-25 | Verify ebook bookmark redirection button | PRE-05 | - Click subject<br>- Click on available Book<br>-Click on Bookmark button | User should be redirected to the bookmarked page of an ebook. | User is redirected to the bookmarked page of an ebook. | PASS |
+| LEARN-26 | Verify ebook notes button | PRE-05 | - Select subject<br>- Click on available book<br>- Click on notes button | User should be redirected to the notes menu of the selected book. | User is redirected to the notes menu of the selected book. | PASS |
+| LEARN-27 | Verify ebook page stamp | PRE-05 | - Click subject<br>- Click on available Book<br>- Click on Continue Learning | User should be navigated to page where they left in ebook. | User is navigated to page where they left in ebook. | PASS |
+| LEARN-28 | Verify Ebook Tool | PRE-06 | - Click on side bar | Side bar with ebook tools should open. | Side bar with ebook tools opened | PASS |
