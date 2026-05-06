@@ -95,7 +95,7 @@
 | LEARN-04 | Competency Evaluator Pre Test | PRE-03 | - Click on Competency Evaluator<br>- Click attempt test under Pre test | User should be redirected to Competency Evaluator page of selected video and Pre test portal should upon. | User redirected to comptetency evaluator page of selected video and pre test portal should open. | PASS |
 | LEARN-05 | Competency Evaluator Post Test | PRE-03 | - Click on Competency Evaluator<br>- Click attempt test under Post test | User should be redirected to Competency evaluator page of selected video and then navigate to test portal. | User should be redirected to Competency evaluator page of selected video and then nagivate to test portal. | PASS |
 | LEARN-06 | Attempt Pre/Post Test | PRE-03 | - Click on Competency Evaluator<br>- Click attempt test under post test<br>- Click start test<br> - Attempt Test |  User should be navigated to competency evaluation page then to test portal and initiate the test. | User is navigated to competency evaluation page then to test and initiated the test. | PASS | 
-| LEARN-07 | Test Paper generation | PRE-03 | - Click on Generate Test Paper | User should be navigated to Test Generation Page. | User is navigated to test generation page. | PASS |
+| LEARN-07 | TestPaper generation | PRE-03 | - Click on Generate TestPaper | User should be navigated to Test Generation Page. | User is navigated to test generation page. | PASS |
 | LEARN-08 | 80% Threshold in the end lesson quiz | PRE-03 | - Click on attempt end lesson quiz<br>- Attempt 80% of answers correctly | User should be give an option for IE if they meet 80% threshold. | User is given an option for IE if they meet 80% threshold. | PASS | 
 | LEARN-09 | View report | PRE-02 | - Click on a Subject<Br>- Click on report | It should display the detailed report of selected subject IVy. | It displayed the detailed report of selected subject IVy. | PASS |
 | LEARN-10 | Add to plan book | PRE-03 | - Click Add to planbook<br>- Enter title<br>- Select start date and end time<br>- Add description<br>- Select does not repeat<br>- Select end date<br>- Select notification time<br>- Click Save | User should be navigated to planbook page & Plan should be set & success message should be displayed. | User is navigated to planbook page & Plan is set & success message is displayed. | PASS |
@@ -117,3 +117,42 @@
 | LEARN-26 | Verify ebook notes button | PRE-05 | - Select subject<br>- Click on available book<br>- Click on notes button | User should be redirected to the notes menu of the selected book. | User is redirected to the notes menu of the selected book. | PASS |
 | LEARN-27 | Verify ebook page stamp | PRE-05 | - Click subject<br>- Click on available Book<br>- Click on Continue Learning | User should be navigated to page where they left in ebook. | User is navigated to page where they left in ebook. | PASS |
 | LEARN-28 | Verify Ebook Tool | PRE-06 | - Click on side bar | Side bar with ebook tools should open. | Side bar with ebook tools opened | PASS |
+
+
+## Module - TestPaper
+## Test ID - TEST
+### Precondition
+| ID | Precondition |
+|----|--------------|
+| PRE-07 | User is logged in and in Testpaper page. |
+| PRE-08 | User is already on testpaper creation page. |
+| PRE-09 | Testpaper is already created. |
+| PRE-10 | Testpaper already attempted. | 
+| PRE-11 | User is on Competency Evaluator page. |
+
+
+### Test Data
+**objective testpaper**
+- title: "Type0Negative"
+- description: "Testing objective testpaper"  
+
+### Test Case
+| Test ID | Description/Scenario | Precondition | Test Step | Expected Result | Actual Result | Status |
+|---------|----------------------|--------------|-----------|-----------------|---------------|--------|
+| TEST-00 | Verify Testpaper page loads. | User is logged in | - Click on Testpaper from Navigation menu | User should be navigated to testpaper page & all the contents should load. | User is navigated to testpaper page & all the contents are loaded. | PASS |
+| TEST-01 | Generate Objective testpaper. | PRE-07 | - Click on Generate testpaper<br>- Click on objective testpaper<br>- Select Multiple choice as type of question<br>- Enter 2 as number of question<br>- Select difficulty to hard<br>- Enter title<br>- Enter description<br>- Click on finish button<br>- Click finish editing button | Testpaper should be generated successfully and display success message along with notification. | Testpaper is generated successfully and displayed success message along with notification. | PASS |
+| TEST-02 | Generate Objective testpaper with single question | PRE-07 | - Click on Generate testpaper<br>- Click on objective testpaper<br>- Enter 1 as number of question<br>- Select difficulty to hard<br>- Enter title<br>- Enter description<br>- Click on finish button<br>- Click finish editing button | Error message below NUmber of question field "Please select value more than 1" should diplay under the field. | Error message below number of question field "Please select value greater than 1" is displayed. | PASS |
+| TEST-03 | Verify max character limit of title field | PRE-08 | - Click on title field<br>- Enter more than 255 characters | Characters after 255 should stop taking value from user. | Characters after 255 length, input field stopped taking inputs from user. | PASS |
+| TEST-04 | Verify max character limit of description field | PRE-08 | - Click on Description field<br>- Enter more than 500 characters | Description field should not accept inputs after 500 characters has reached. | Description field stops receiving value after 500 character has reached. | PASS |
+| TEST-05 | Generate Objective testpaper with empty title field | PRE-07 | - Click on Generate testpaper<br>- Click on objective testpaper<br>- Select Multiple choice as type of question<br>- Enter 2 as number of question<br>- Select difficulty to hard<br>- Leave title field empty<br>- Click on finish button | "Required" error message below the title field should be displayed. | "Required" error message below the title field is displayed. | PASS |
+| TEST-06 | Generate Objective testpaper with more than 20 questions | PRE-07 | - Click on Generate testpaper<br>- Click on objective testpaper<br>- Enter 25 as number of question<br>- Select difficulty to hard<br>- Enter title<br>- Enter description<br>- Click on finish button<br>- Click finish editing button | Error message below NUmber of question field "Please select value less than 20" should diplay under the field. | Error message below number of question field "Please select value less than 20" is displayed. | PASS |
+| TEST-07 | Generate Subjective testpaper. | PRE-07 | - Click on Generate testpaper<br>- Click on subjective testpaper<br>- Select Open ended as type of question<br>- Enter 2 as number of question<br>- Select difficulty to hard<br>- Enter title<br>- Enter description<br>- Click on finish button<br>- Click finish editing button | Testpaper should be generated successfully and display success message along with notification. | Testpaper is generated successfully and displayed success message along with notification. | PASS |
+| TEST-08 | Delete testpaper | PRE-07 | - Select a testpaper to delete<br>- Hover around the test card<br>- Click on delete icon<br>- Click Delete Testpaper | "You have deleted your testpaper" message should be displayed upon deleting the testpaper. | "You have deleted your testpaper" message is displayed upon deleting the testpaper. | PASS |
+| TEST-09 | View subjective testpaper | PRE-07 | - Select a testpaper to view<br>- Click on eye icon | Selected testpaper should open. | Selected testpaper is opened. | PASS |
+| TEST-10 | Download subjective testpaper | PRE-07 | - Select a subjective testpaper<br>- Click on eye icon<br>- Click on Download PDF button | Testpaper should be downloaded as pdf file. | Testpaper is downloaded as pdf file | PASS |
+| TEST-11 | Filter Testpaper by testpaper type | PRE-07, PRE-09 | - Click on Filter option<br>- Click on objective/subjective | Testpaper should be filtered out by based on selected filter. | Testpaper is filtered out by based on selected filter. | PASS |
+| TEST-12 | Filter Testpaper based on subject | PRE-07, PRE-09 | - Click on subject filter option<br>- Select a subject | Testpaper should be listed out based on selected subject. | Testpaper listed out based on selected subject. | PASS |
+| TEST-13 | Search Testpaper using searchbar | PRE-07, PRE-09 | - Click on search bar<br>- Enter the name of testpaper<br>- hit enter | Searched testpaper should be listed. | Searched testpaper is listed. | PASS | 
+| TEST-14 | Search testpaper error handling | PRE-07 | - Click on search bar<br>- Enter the name of testpaper<br>- hit enter | Proper invalid message "No Result Found" should display. | Proper invalid message "No Result Found" displayed. | PASS |
+| TEST-15 | Attempt objective test | PRE-07, PRE-09 | - Click on attempt test<br>- Attempt all the questions<br>- Click on submit answer | Testpaper submitted message along with modal with result should display. | Testpaper submitted message along with modal with result is displayed. | PASS |
+| TEST-16 | View Grading | PRE-07, PRE-10 | - Click on View Grading of attempted test | A modal containing test result should open. | A modal containing test result is opened. | PASS | 

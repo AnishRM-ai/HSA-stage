@@ -111,7 +111,7 @@
 | PROFILE-00 | Navigate to profile page | PRE-05 | - Click on Round Circle icon in nav bar<br>- Click on My Profile | User should be navigated to my profile page. | User is nagivated to my profile page. | PASS |
 | PROFILE-01 | Update Full name | PRE-05, PRE-06 | - Click on full name<br>- Make Changes in name field<br> - Click Save profile | "Profile Updated Successfully" message should be displayed and name should be updated. | "Profile Updated Successfully" message displayed and name updated. | PASS |
 | PROFILE-02 | Update Email address | PRE-05, PRE-06 | - Click on Change Email Address<br> - Enter new email & password<br>- Click Save | Email changed success message should be displayed and email should be updated. | Email changed success message displayed and email updated. | PASS |
-| PROFILE-03 | Password change | PRE-05, PRE-06 | - Click on password tab<br>- Enter current password<br>- Enter new password & Re enter the same<br>- Change Password | Password change success message should be displayed and password should be changed successfully. | PASS |
+| PROFILE-03 | Password change | PRE-05, PRE-06 | - Click on password tab<br>- Enter current password<br>- Enter new password & Re enter the same<br>- Change Password | Password change success message should be displayed and password should be changed successfully. | Password change success message is displayed and password is changed. | PASS |
 
 
 ## Module - Logout
