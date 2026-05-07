@@ -129,6 +129,8 @@
 | PRE-09 | Testpaper is already created. |
 | PRE-10 | Testpaper already attempted. | 
 | PRE-11 | User is on Competency Evaluator page. |
+| PRE-12 | User is already attempting testpaper. | 
+| PRE-13 | User has already attempted Pre/Post Test. |
 
 
 ### Test Data
@@ -156,3 +158,73 @@
 | TEST-14 | Search testpaper error handling | PRE-07 | - Click on search bar<br>- Enter the name of testpaper<br>- hit enter | Proper invalid message "No Result Found" should display. | Proper invalid message "No Result Found" displayed. | PASS |
 | TEST-15 | Attempt objective test | PRE-07, PRE-09 | - Click on attempt test<br>- Attempt all the questions<br>- Click on submit answer | Testpaper submitted message along with modal with result should display. | Testpaper submitted message along with modal with result is displayed. | PASS |
 | TEST-16 | View Grading | PRE-07, PRE-10 | - Click on View Grading of attempted test | A modal containing test result should open. | A modal containing test result is opened. | PASS | 
+| TEST-17 | Attempt Pre-Test | PRE-11 | - Select a chapter<br>- Click on Attempt test of Pre-Test Card<br>- Click start test<br>- Attempt all the questions<br>- Click complete test| A report modal should open | A report modal is opened | PASS |
+| TEST-18 | Attempt Post-Test | PRE-11 | - Select a chapter<br>- Click on Attempt test of Post-Test Card<br>- Click start test<br>- Attempt all the questions<br>- Click complete test. | A report modal should open | A report modal is opened | PASS |
+| TEST-19 | Verify submitting test without attempting all the questions. | PRE-12 | - Click on next button | Next button or complete test button should be disbled if no option is selected. | Next button or complete test button is disabled, when no option is selected. | PASS |
+| TEST-20 | Verify test portal previous button | PRE-12 | - Click on previous button | It should bring previous question with option. | It brought previous question with editable options. | PASS |
+| TEST-21 | Verify if user can come back to test after closing browser within the time limit. | PRE-12 | - Attempt half of the question<br>- close the browser<br>- Goto your left test page<br>-Click continue test | User should be able to continue the test within the test timeframe. | User is able to continue the test within the test timeframe. | PASS | 
+| TEST-22 | Pre/Post test view grading | PRE-13 | - Click on view grading of pre/post test card | A modal containing result of attempted test should be visible. | A modal containing result of attempted test is visible. | PASS |
+| TEST-23 | Search chapter using searchbar | PRE-11 | - Click on search bar<br>- Enter the chapter name<br>- hit enter | Searched chapter should be listed. | Searched chapter is listed. | PASS |  
+| TEST-24 | Verify subject filter | PRE-11 | - Click on subject filter<br>- Select a subject | Chapter based on selected subject should be displayed. | Chapter based on selected subject is displayed. | 
+
+## Module - Planbook
+## Test ID - PLANBOOK
+### Precondition
+| ID | Precondition |
+|----|--------------|
+| PRE-14 | User is logged in and on Planbook Page. |
+| PRE-15 | Plan is already created. |
+| PRE-16 | User is already on Plan creation form | 
+
+### Test Data
+- Title: Stone
+- Date: May 7th, 2026
+- Start time: 10:51 AM
+- End time: 11:36 AM
+- Description: wohoo hoo
+
+
+### TestCase
+| Test ID | Description/Scenario | Precondition | Test Step | Expected Result | Actual Result | Status |
+|---------|----------------------|--------------|-----------|-----------------|---------------|--------|
+| PLANBOOK-00 | Create Plan with valid data | PRE-14 | - Click on create plan button<br>- Enter title<br>- Select a color<br>- Select date & start and end time<br>- Enter description<br>- Select does not repeat on repeat option.<br>- Select End date<br>- Select notification option<br>- Click save | "Plan created successfully" message should be displayed and plan should be created. | "Plan created successfully" message is displayed and plan is created. | PASS | 
+| PLANBOOK-01 | Edit Plan | PRE-14, PRE-15 | - Select a plan to edit<br>- Click on edit button<br>- Make changes<br>- Click Save. | "Plan Edit Successfully" message should be displayed upon editing plan. | "Plan Edit Successfully" message is displayed upon editing plan. | PASS 
+| PLANBOOK-02 | Delete Plan | PRE-14, PRE-15 | - Select a plan to delete<br>- Click on delete icon<br>- Click delete | Upon deleting the planbook, success message "Plan Deleted Successfully" should be displayed. | Upon deleting the planbook, success message "Plan Deleted Successfully" is displayed. | PASS | 
+| PLANBOOK-03 | Create Plan with empty title field | PRE-14 | - Click on create plan button<br>- Leave title field empty<br>- Select a color<br>- Select date & start and end time<br>- Enter description<br>- Select does not repeat on repeat option.<br>- Select End date<br>- Select notification option<br>- Click save | Save button should be disabled | Save button is disabled | PASS |
+| PLANBOOK-04 | Create Plan with empty description field | PRE-14 | - Click on create plan button<br>- Enter title<br>- Select a color<br>- Select date & start and end time<br>- Leave description field empty<br>- Select does not repeat on repeat option.<br>- Select End date<br>- Select notification option<br>- Click save | Save button should be disabled & Required message should be displayed under the description field. | Save button is disabled & Required message is displayed under the description field. | PASS |
+| PLANBOOK-05 | Verify minimum character in title field | PRE-14 | - Click on create plan button<br>- Enter title less than 3 characters<br>- Select a color<br>- Select date & start and end time<br>- Leave description field empty<br>- Select does not repeat on repeat option.<br>- Select End date<br>- Select notification option<br>- Click save | Save button should be disabled & validation message indicating title should be greater or equal to 3 characters should be displayed. | Save button is disabled & validation message indication title should be greater or equal to 3 characters is displayed. | PASS |
+| PLANBOOK-06 | Verify maximum characters of description field. | PRE-14 | - Click on create plan button<br>- Enter title<br>- Select a color<br>- Select date & start and end time<br>- Enter description more than max limit<br>- Select does not repeat on repeat option.<br>- Select End date<br>- Select notification option<br>- Click save | Description field should stop accepting value after max value has reached.| Description field stopped accepting value after max value has reached. | PASS |
+
+
+## Module - Subscription
+## Test ID - SUBSCRIPTION
+### Precondition
+| ID | Precondtion |
+|----|-------------|
+| PRE-17 | User is on subscription page. |
+| PRE-18 | User has already subscribed premium | 
+### Test Data
+
+### TestCase
+| Test ID | Description/Scenario | Precondition | Test Step | Expected Result | Actual Result | Status |
+|---------|----------------------|--------------|-----------|-----------------|---------------|--------|
+| SUBSCRIPTION-00 | Verify subscription details of selected plan | PRE-17 | - Click on Explore plan of premium plan | Detailed page about selected subscription should open. | Detailed page about selected subscription is opened. | PASS |
+| SUBSCRIPTION-01 | Verify successful subscription purchase | PRE-17 | - Click on Explore plan of premium plan<br>- Click upgrade package<br>- Select Stripe as payment method<br> - Click continue<br>- Enter valid credentials<br>- Click Confirm Payment | User should get notification & email on the premium plan and the subjects that includes in the plan. | User got the notification & email on the premium plan and the subjects that includes in the plan. | PASS |
+| SUBSCRIPTION-02 | Verify premium subjects videos are available | User is on Learning page, PRE-18 | - Select the subscribed package videos<br>- Click on the subject<br>- Click on videos | User should be able to access premium videos. | User is able to access premium videos. | PASS | 
+| SUBSCRIPTION-03 | Buy Tutor Credits | PRE-18 | - Click on Buy Tutor Credits button<br>- Enter the number of TC<br>- Select stripe as payment method<br>- Click continue <br>- Enter valid card details<br> - Click confirm payment | User should get an email & notification on details about TC purchase. | User got an email & notification on details about TC purchase. | PASS | 
+| SUBSCRIPTION-04 | Manage Subscription | PRE-17 | - Click on Manage subscription button | User should be redirected to manage subscription page. | User is redirected to manage subscription page. | PASS |
+| SUBSCRIPTION-05 | Upgrade Fremium Plan | PRE-17 | - Click on Manage subscription button<br>- Select a subject to upgrade<br>- Click upgrade<br>- Select prefered subject<br>- Click buy package button<br>- Select stripe as payment method & Click continue<br>- Enter Card details<br>- Click Confirm payment. | Selected subject should be upgraded to premium & email , notification should be sent to user. | Selected subject is upgraded to premium & email, notification is sent to user. | PASS | 
+| SUBSCRIPTION-06 | Extend current premium plan | PRE-17, PRE-18 | - Click on Manage subscription button<br>- Select a subject to extend<br>- Click extend<br>- Select prefered subject if available<br>- Click buy package button<br>- Select stripe as payment method & Click continue<br>- Enter Card details<br>- Click Confirm payment. | Selected subject should be extended & email , notification should be sent to user. | Selected subject is extended & email, notification is sent to user. | PASS | 
+
+
+## Module - Academic Support
+## Test ID - ACADEMIC
+### Precondition
+| ID | Precondition |
+|----|--------------|
+| PRE-19 | User is on academic support page |
+
+### Test Case
+| Test ID | Description/Scenario | Precondition | Test Step | Expected Result | Actual Result | Status |
+|---------|----------------------|--------------|-----------|-----------------|---------------|--------|
+| ACADEMIC | Send Academic support | PRE-19 | - Click on Send or Get academic support button<br>- Select subject<br>- Enter title<br>- add attachement<br>- Add your question<br> Click Send | Academic queries should be sent to the teacher related to subject. | Academic queries did not sent to the teacher. | FAIL |
